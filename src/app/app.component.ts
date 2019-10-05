@@ -30,7 +30,12 @@ export class AppComponent {
       {
         title: 'Layout Menu',
         url: '/layout-menu',
-        icon: 'settings'
+        icon: 'tablet-portrait'
+      },
+      {
+        title: 'Componentes',
+        url: '/componentes',
+        icon: 'git-compare'
       }
   ];
 

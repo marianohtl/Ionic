@@ -34,4 +34,8 @@ export class LayoutPage implements OnInit {
   }
 
 
+  openLayoutCss(){
+    this.navCtrl.navigateForward('utilidades-css')
+  }
+
 }

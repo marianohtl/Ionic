@@ -1,6 +1,5 @@
 <ion-header>
     <ion-toolbar>
-  <!--   essa porra não funciona -->
         <ion-buttons slot="start">
             <ion-back-button></ion-back-button>
           </ion-buttons>
@@ -13,7 +12,107 @@
     <ion-buttons>
        <ion-menu-button></ion-menu-button>
      </ion-buttons>
-     <ion-icon>
-          
+     <ion-icon>        
      </ion-icon>
+     <ion-grid>
+
+      <ion-row>
+        <ion-col>Coluna 1</ion-col>
+        <ion-col>Coluna 2</ion-col>
+        <ion-col>Coluna 3</ion-col>
+      </ion-row>
+     
+      <h4>Grid possui 4 colunas</h4>
+     <ion-row>
+       <ion-col>Coluna 1</ion-col>
+       <ion-col>Coluna 2</ion-col>
+     </ion-row>
+     <h3></h3>
+
+    
+    <ion-row class="ion-text-center">
+      <ion-col>Coluna 1</ion-col>
+      <ion-col>Coluna 2</ion-col>
+      <ion-col>Coluna 3</ion-col>
+      <ion-col>Coluna 4</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+      <ion-row flex-wrap: nowrap >
+        <!-- classe para solucionar o problema do ionic -->
+        <ion-col size="2">Tamanho 2</ion-col>
+        <ion-col size="3">Tamanho 3</ion-col>
+        <ion-col size="2">Tamanho 2</ion-col>
+        <ion-col size="5">Tamanho 5</ion-col>
+      </ion-row>
+      
+    </ion-grid>
+
+
+<ion-grid>
+  <ion-row flex-wrap: nowrap >
+    <!-- classe para solucionar o problema do ionic -->
+    <ion-col size="1">Tamanho 1</ion-col>
+    <ion-col size="1">Tamanho 2</ion-col>
+    <ion-col size="1">Tamanho 3</ion-col>
+    <ion-col size="1">Tamanho 4</ion-col>
+    <ion-col size="1">Tamanho 5</ion-col>
+    <ion-col size="1">Tamanho 6</ion-col>
+    <ion-col size="1">Tamanho 7</ion-col>
+    <ion-col size="1">Tamanho 8</ion-col>
+    <ion-col size="1">Tamanho 9</ion-col>
+    <ion-col size="1">Tamanho 10</ion-col>
+    <ion-col size="1">Tamanho 11</ion-col>
+    <ion-col size="1">Tamanho 12</ion-col>
+  </ion-row>
+  
+</ion-grid>
+
+<h4>Pulando colunas para direita</h4>
+<ion-grid>
+    <ion-row flex-wrap: nowrap>
+      <!-- classe para solucionar o problema do ionic -->
+      <ion-col size="3">Tamanho 1</ion-col>
+      <ion-col size="3" offset="3">Tamanho 2</ion-col>
+      <ion-col size="3">Tamanho 3</ion-col>
+    </ion-row>
+    
+  </ion-grid>
+  
+  <h4>Alinhamento vertical</h4>
+  <ion-grid class="ion-text-center">
+      <ion-row flex-wrap: nowrap align-items-start>
+        <!-- classe para solucionar o problema do ionic -->
+        <ion-col>Coluna 1</ion-col>
+        <ion-col>Coluna 2</ion-col>
+        <ion-col>Coluna 3</ion-col>
+        <ion-col>Coluna 4 - Maior <br> #<br>#<br>#</ion-col>
+   </ion-row>
+</ion-grid>
+
+<ion-grid class="ion-text-center">
+    <ion-row flex-wrap: nowrap align-items-center>
+      <!-- classe para solucionar o problema do ionic -->
+      <ion-col>Coluna 1</ion-col>
+      <ion-col>Coluna 2</ion-col>
+      <ion-col>Coluna 3</ion-col>
+      <ion-col>Coluna 4 - Maior <br> #<br>#<br>#</ion-col>
+  </ion-row>  
+</ion-grid>
+
+
+<ion-grid class="ion-text-end">
+    <ion-row flex-wrap: nowrap align-items-end>
+      <!-- classe para solucionar o problema do ionic -->
+      <ion-col>Coluna 1</ion-col>
+      <ion-col>Coluna 2</ion-col>
+      <ion-col>Coluna 3</ion-col>
+      <ion-col>Coluna 4 - Maior <br> #<br>#<br>#</ion-col>
+  </ion-row>  
+</ion-grid>
+
+<ion-footer class="ion-text-center">
+  <p>App para curso técnico - Senac Tatuapé</p>
+</ion-footer>
 </ion-content>

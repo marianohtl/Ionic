@@ -19,7 +19,14 @@ const routes: Routes = [
   { path: 'layout', loadChildren: './layout/layout.module#LayoutPageModule' },
   { path: 'layout-menu', loadChildren: './layout-menu/layout-menu.module#LayoutMenuPageModule' },
   { path: 'layout-split', loadChildren: './layout-split/layout-split.module#LayoutSplitPageModule' },
-  { path: 'layout-grid', loadChildren: './layout-grid/layout-grid.module#LayoutGridPageModule' }
+  { path: 'layout-grid', loadChildren: './layout-grid/layout-grid.module#LayoutGridPageModule' },
+  { path: 'utilidades-css', loadChildren: './utilidades-css/utilidades-css.module#UtilidadesCssPageModule' },
+  { path: 'componentes', loadChildren: './componentes/componentes.module#ComponentesPageModule' },
+  { path: 'action-sheet', loadChildren: './action-sheet/action-sheet.module#ActionSheetPageModule' },
+  { path: 'alert', loadChildren: './alert/alert.module#AlertPageModule' },
+  { path: 'badges', loadChildren: './badges/badges.module#BadgesPageModule' },
+  { path: 'card', loadChildren: './card/card.module#CardPageModule' },
+  { path: 'comp-button', loadChildren: './comp-button/comp-button.module#CompButtonPageModule' }
 ];
 
 @NgModule({
