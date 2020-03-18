@@ -1,0 +1,27 @@
+<style>
+    p{
+        color: red;
+        font-size: 20px;
+    }
+
+</style>
+
+<teste-shadow-dom></teste-shadow-dom>
+
+<p>Teste com Shadow DOM 2</p>
+
+<script>
+    //o shadow dom cria um encapsulamento na nossa tag
+    class ShadowDOM extends HTMLElement{
+        connectedCallback(){
+            //o método abaixo retorna um array, logo indicamos qual elemento queremos
+            //o método attachShadow coloca "a sombra" no nosso elemento (o estilo), o mesmo precisa colocar um mode (pode ser aberto ou fechado = tem um encapsulamento maior) 
+            const shadowDOM = document.getElementsByTagName('teste-shadow-dom')[0].attachShadow({mode: 'open'});
+            shadowDOM.innerHTML = '<img src="./img/teste.png.webp" alt="imagem de um teste"> <p>Teste com Shadow DOM</p>'
+            //temos então o encapsulamento no nosso elemento
+        }
+    }
+
+    customElements.define('teste-shadow-dom', ShadowDOM)
+</script>
+

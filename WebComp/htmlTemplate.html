@@ -1,0 +1,38 @@
+<!-- Html Template -->
+<exemplo-template></exemplo-template>
+<p>Um exemplo de template.</p>
+
+<template id="templateExemplo">
+    <li>
+        <span id="exemplinho"></span>
+</li>
+</template>
+<ul id="listaExemplo"></ul>
+
+<button onclick="mostrarExemplo()">Olhe o exemplo!</button>
+
+<script>
+
+    class ShadowDOM extends HTMLElement{
+        connectedCallback(){
+            const shadowDOM = document.getElementsByTagName('exemplo-template')[0].attachShadow({mode: 'open'});
+            shadowDOM.innerHTML = '<img src="./img/teste.png.webp" alt="imagem de um teste"> <p>Teste com Shadow DOM</p>'
+        }
+    }
+
+    customElements.define('exemplo-template', ShadowDOM)
+
+    function mostrarExemplo(){
+        const template = document.getElementById('templateExemplo')[0].attachShadow({mode: 'open'});
+        const exemplos = ['ex_1', 'ex_2','ex_3'];
+
+        exemplos.forEach(exemplo => {
+            //importNode -> método que importa um nó dentro do DOM que recebe dois parâmetros (conteúdo do template, filhos do template?)
+            const instancia = document.importNode(template.content, true);
+
+            instancia.getElementById('exemplinho') = exemplo;
+
+            document.getElementById('listaExemplo').appendChild(instancia);
+        })
+    }
+</script>

@@ -1,0 +1,23 @@
+<!-- Todos os elementos que tem tracinhos, são ion alguma coisa, são custom elements que o ionic criou para si -->
+
+<!-- Custon Tag -->
+<minha-receita-favorita></minha-receita-favorita>
+
+
+<script>
+    // criamos uma classe
+    // estendendo o objeto de html para a classe (estendendo so htmlElement)
+    class MinhaReceitaFavorita extends HTMLElement{
+        //método ref. ao ciclo de vida do elemento 
+        //quando o elemento for conectado ao dom, ele chama a função e o que tem dentro dele será executado
+        connectedCallback(){
+            this.innerHTML = '<h1>Pavê de Mojango</h1>'
+        }
+        // a função acima sobscreve o html que tem dentro da tag 
+    }
+
+    //registrando o custon element (dizendo que a classe pertence a custon tag)
+    //possui dois parâmetros
+    customElements.define('minha-receita-favorita', MinhaReceitaFavorita)
+</script>
+
