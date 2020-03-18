@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title>Layout</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  Criando Botão:<ion-button href="">Criar Botão</ion-button><br><br>
+  Espandindo Botão: <ion-button href="" expand="full" >Expandir Botão</ion-button>
+<ion-button href="" expand="full" color="danger">Colorir Botão</ion-button><br><br> 
+
+<ion-button href="" expand="full" (click)="openLayoutMenu()">Menu</ion-button>
+<ion-button href="" expand="full" (click)="openLayoutSplit()">Split Pane</ion-button>
+<ion-button href="" expand="full" (click)="openLayoutGrid()">Grid</ion-button>
+<ion-button href="" expand="full" (click)="openLayoutCss()">Utilidades CSS</ion-button>
+</ion-content>
+
+<ion-footer class="ion-text-center">
+  <p>Curso Ionic - Senac Tatuapé</p>
+</ion-footer>
