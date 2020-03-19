@@ -1,0 +1,53 @@
+<ion-content class="ion-padding">
+  <h1 class="ion-text-center">
+    <ion-icon name="checkmark-done" color="success" class="icon-7em"></ion-icon>
+  </h1>
+
+  <!--
+6º - Declarar Formgroup
+
+Meu for é um agrupamento de formgroups.
+Quem configura isso é o authForm
+
+
+9º -  Declarar método onSubmit para ter retorno no form
+-->
+  <form [formGroup]="authForm" (submit)="onSubmit()">
+
+    <ion-item>
+      <ion-icon name="mail" color="black" slot="start">
+      </ion-icon>
+      <!--
+        7º - Declarar Nome do Form Control
+        FormControlName indicar o form control que irá trabalhar - indicamos o nome do formcontrol que foi conf. dentro do formgroup-->
+      <ion-input type="email" placeholder="Email" inputmode="email" autofocus="true" formControlName="email">
+      </ion-input>
+
+      <!--*ngIf   ciclo de vida é acionado IF
+      1.2 - Colocamos ion-notes que serão ativadas conforme validação
+    -->
+      <ion-note slot="end" color="danger" *ngIf="email.dirty && email.hasError('required')">Obrigatório</ion-note>
+
+      <ion-note slot="end" color="danger" *ngIf="email.dirty && email.hasError('email')">E-mail Inválido</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="lock-closed" color="black" slot="start">
+      </ion-icon>
+      <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+
+      <ion-note slot="end" color="danger" *ngIf="senha.dirty && senha.hasError('required')">Senha Obrigatória</ion-note>
+      <ion-note slot="end" color="danger" *ngIf="senha.dirty && senha.hasError('minlength')">Senha Inválida</ion-note>
+
+    </ion-item>
+    <!--
+      8º - Declarar que o botão login é inválido enquanto authForm for true (opção forms não forem validadas)
+    -->
+    <ion-button type="submit" [disabled]="authForm.invalid" color="primary" class="ion-margin" expand="block">Entrar
+    </ion-button>
+  </form>
+  <ion-button fill="clear" color="dark" class="ion-margin" expand="block">
+    <ion-icon name="logo-facebook" color="primary" slot="start"></ion-icon>
+    Entrar com Facebook
+  </ion-button>
+  <ion-button color="dark" class="ion-margin" expand="block" fill="clear">Criar Conta</ion-button>
+</ion-content>
